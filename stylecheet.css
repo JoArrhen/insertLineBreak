@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: lightblue; */
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }  
+h1 {
+    font-size: 5vh;
+    font-weight: 1000;
+    text-decoration: underline;
+}
+
+.flex-container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+.flex-container > .field{
+    margin: 0;
+
+    border-style: dashed;
+    /* max-width: 700px; */
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+.inputDiv {
+    flex: 1;
+}
+.outputDiv {
+    flex: 1;
+}
+.flex-container > .header {
+    flex: 1;
+    align-self: flex-start;
+    background-color: white;
+    min-width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 90px; */
+
+}
+textarea {
+    flex: 1;
+    resize: none;
+    font-size: 1em;
+    background-color:lightgray;
+}
+p {
+    margin-left: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media all and (max-width: 1000px) {
+    .flex-container > .field{
+        border-style: dashed;
+        max-width: 95%;
+        min-width: 95%;
+    }
+    h1 {
+        font-size: 4vh;
+        font-weight: 1000;
+        text-decoration: underline;
+    }
+    p {
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .flex-container {
+        justify-content: space-start;
+    }
+
+    .flex-container > .header {
+        height: 5%;
+    }
+    .flex-container > .inputDiv{
+        height: 60%;
+        min-height: 300px;
+    }
+    .flex-container > .outputDiv{
+        height: 30%;
+        min-height: 200px;
+    }
+   
+}

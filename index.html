@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="stylecheet.css">
+<title>Display My Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body>
+<div class="flex-container">
+    <div class="header"><h1>Display My Notes</h1></div>
+    <div class="inputDiv field">
+        <p>Enter the note that you want to add line breaks to by pasting it in or writing it in the textbox, and the newline characters (\n) will be added in the bottom texbox automatically.</p>
+        <textarea oninput="inputDetected()"id="inputTextArea" placeholder="Enter your note here..."></textarea>
+    </div>
+    <div class="outputDiv field">
+        <p>Copy the result and paste it in the settings for garmin connect</p>
+        <textarea id="outputTextArea" placeholder="The result will be displayed here..."></textarea>
+    </div>
+</div>
+
+</body>
+</html>
