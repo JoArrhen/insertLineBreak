@@ -7,7 +7,7 @@ function inputDetected() {
     for(i = 0; i < sentnsArr.length; i++) {
         result += sentnsArr[i];
         if (i != sentnsArr.length - 1) {
-            result += "\\n";
+            result += ";";
         }
     }
 
