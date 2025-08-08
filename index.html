@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87277802-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87277802-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-87277802-2');
-</script>
-<script src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="stylecheet.css">
-<title>Display My Notes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    gtag('config', 'UA-87277802-2');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Display My Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
-<body>
-<div class="flex-container">
-    <div class="header"><h1>Display My Notes</h1></div>
-    <div class="inputDiv field">
-        <p>Enter the note that you want to add line breaks to by pasting it in or writing it in the textbox, and the semicolons ( ; ) will be added in the bottom texbox automatically.</p>
-        <textarea oninput="inputDetected()"id="inputTextArea" placeholder="Enter your note here..."></textarea>
-    </div>
-    <div class="outputDiv field">
-        <p>Copy the result and paste it in the settings for garmin connect</p>
-        <textarea id="outputTextArea" placeholder="The result will be displayed here..."></textarea>
-    </div>
-</div>
-
+<body class="min-h-screen bg-gray-50 flex flex-col items-center p-4">
+  <header class="w-full max-w-3xl">
+    <h1 class="text-3xl font-bold text-center underline mb-6">Display My Notes</h1>
+  </header>
+    <main class="w-full max-w-3xl flex flex-col gap-6 md:flex-row">
+      <section class="flex flex-col flex-1">
+        <p class="mb-2 text-gray-700 md:h-24">Enter the note that you want to add line breaks to by pasting it in or writing it in the textbox, and the semicolons ( ; ) will be added in the bottom textbox automatically.</p>
+        <textarea id="inputTextArea" placeholder="Enter your note here..." class="h-64 p-2 border rounded resize-none"></textarea>
+      </section>
+      <section class="flex flex-col flex-1">
+        <p class="mb-2 text-gray-700 md:h-24">Copy the result and paste it in the settings for garmin connect</p>
+        <textarea id="outputTextArea" placeholder="The result will be displayed here..." class="h-64 p-2 border rounded bg-gray-100 resize-none" readonly></textarea>
+        <button id="copyButton" type="button" class="mt-2 self-end bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Copy</button>
+      </section>
+    </main>
+  <script src="script.js"></script>
 </body>
 </html>
